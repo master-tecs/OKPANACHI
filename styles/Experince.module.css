@@ -1,0 +1,93 @@
+.experince {
+    /* background-color: var(--color-primary); */
+    /* background-color: #c6efbe; */
+    width: 100%;
+    height: auto;
+}
+
+
+.experince .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 100%;
+    margin: 20px auto 15px;
+    padding: 40px 0 35px;
+    gap: 20px;
+    text-align: center;
+    max-width: 1400px;
+}
+
+
+.experince .container .title {
+    font-size: 25px;
+}
+
+.experince .container ul {
+    margin-top: 15px;
+}
+
+.experince .container ul li {
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(225, 225, 225, 0.7);
+    margin: 0 0 1.5rem;
+    padding: 5px 15px 9px;
+}
+
+.experince .container ul li label {
+    cursor: pointer;
+    background-color: red !important;
+}
+
+.experince .container ul li label h3::before {
+    content: "+";
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.input {
+    display: none;
+}
+
+.federal input[type="radio"]:checked+label+.list {
+    height: min-content;
+    margin: 15px 15px 10px;
+}
+
+.federal input[type="radio"]:checked+label h3::before {
+    content: "-";
+}
+
+.experince .container .federal {
+    width: 100%;
+    text-align: left;
+}
+
+.experince .container .federal h3 {
+    /* margin: 0px 0px ; */
+    font-size: medium;
+}
+
+.experince .container .federal .list {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.7s, margin 0.5s;
+}
+
+.experince .container .federal .list .item {
+    background: var(--color-secondary);
+    padding: 4px 7px;
+    font-size: small;
+    border-radius: 8px;
+    font-weight: bold;
+}

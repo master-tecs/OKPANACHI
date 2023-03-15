@@ -1,0 +1,98 @@
+.banner {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 10px;
+    margin: 70px 0 60px;
+    /* background-color: #bbeef8; */
+}
+
+.banner.noMarging {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    max-width: 1450px;
+}
+
+.banner .container .right {
+    /* flex: .55; */
+    background-color: #a03131;
+}
+
+.banner .container .right .img {
+    width: 100%;
+    /* height: 75%; */
+}
+
+.banner .container .left {
+    /* width: 45%; */
+}
+
+.banner .container .left h1 {
+    font-size: 34px;
+    color: var(--color-primary);
+}
+
+.banner .container .left p {
+    margin: 18px 0 25px;
+    line-height: 1.5em;
+}
+
+.banner .container .cta {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: .85rem;
+    background-color: var(--color-third);
+    color: aliceblue;
+}
+
+
+.banner .container .cta:hover {
+    opacity: 0.8;
+}
+
+
+/*  */
+/* MEDIA QURIES FOR SMALL TABLETS AND MOBILE PHONES */
+/*  */
+@media screen and (max-width: 740px) {
+    .banner {
+        margin-top: 100px;
+        height: auto;
+        padding: 15px 0 10px;
+    }
+
+    .banner .container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .banner .container .left, .banner .container .right {
+        width: 100%;
+    }
+
+    .banner .container .right .img {
+        height: 100%;
+    }
+}
+
+
+/*  */
+/* MEDIA QURIES FOR MOBILE PHONES AND SMALL PHONES */
+/*  */
+@media screen and (max-width: 440px) {
+    .banner .container {
+        width: 90%;
+    }
+}

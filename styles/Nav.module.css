@@ -1,0 +1,130 @@
+.nav {
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.nav .container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1450px;
+}
+
+.nav .container .menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav .container .menuSm, .nav .container .menuSmClose {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 230px;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+
+.nav .container .logo {
+    color: var(--color-third);
+    cursor: pointer;
+}
+
+.nav .container .menu>li, .nav .container .menuSm>li {
+    cursor: pointer;
+    color: var(--color-secondary);
+}
+
+.nav .container .menu>li:hover {
+    color: #fe956f;
+    opacity: 0.8;
+}
+
+/* .nav .container .menuSm>li:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    opacity: 0.8;
+} */
+
+.nav .container>.cta {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: .85rem;
+}
+
+
+.nav .container .cta:hover {
+    opacity: 0.8;
+}
+
+.nav .container .icon {
+    display: none;
+}
+
+/*  */
+/* MEDIA QURIES FOR SMALL TABLETS AND MOBILE PHONES */
+/*  */
+@media screen and (max-width: 740px) {
+    .menuSmClose {
+        transform: translateX(100%);
+    }
+
+    .nav .container .icon {
+        display: block;
+        cursor: pointer;
+        color: var(--color-secondary);
+    }
+
+    .nav .container .menuSm {
+        background-color: var(--color-primary);
+        transform: translateX(0%);
+        border-radius: var(--border-radius);
+    }
+
+    .nav .container .menu {
+        display: none;
+    }
+
+    .nav .container>.cta {
+        display: none;
+    }
+
+    .nav .container .menuSm>li {
+        padding: 3px 5px;
+    }
+
+    .nav .container .menuSm .cta {
+        padding: var(--btn-padding);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: .75rem;
+        border-radius: var(--border-radius);
+    }
+}
+
+
+
+/*  */
+/* MEDIA QURIES FOR MOBILE PHONES AND SMALL PHONES */
+/*  */
+@media screen and (max-width: 440px) {
+    .nav .container {
+        width: 90%;
+    }
+}

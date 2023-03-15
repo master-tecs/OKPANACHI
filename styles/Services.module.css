@@ -1,0 +1,44 @@
+.services {
+    background-color: #eefeee;
+    width: 100%;
+    height: auto;
+}
+
+
+.services .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    gap: 20px;
+    text-align: center;
+    max-width: 1400px;
+}
+
+.services .container .title {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.services .container .subtitle {
+    color: var(--color-dark);
+    text-transform: uppercase;
+    color: var(--color-gray)
+}
+
+.services .container .top {
+    margin-top: 45px;
+}
+
+
+.services .container .bottom {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+}

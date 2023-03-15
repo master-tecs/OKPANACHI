@@ -7,7 +7,7 @@
   --color-white: hsl(252, 30%, var(--white-color-lightness));
   --color-light: hsl(252, 30%, var(--light-color-lightness));
   --color-gray: hsl(252, 15%, 65%);
-  --color-primary: #6dec84;
+  --color-primary: hsl(131, 77%, 68%);
   --color-secondary: #fe9a06;
   --color-third: #1badac;
   --color-success: hsl(120, 95%, 65%);

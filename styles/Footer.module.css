@@ -69,14 +69,12 @@
 
 .servises p {
     margin-top: .4rem;
-    cursor: pointer;
 }
 
 .locations>div {
     display: flex;
     gap: 0.3rem;
     margin-top: .6rem;
-    cursor: pointer;
     transition: all .3s ease-out;
     font-size: 15px;
 }
@@ -87,7 +85,7 @@
     margin-top: 2.5px;
 }
 
-.locations>div :hover, .browse li:hover, .servises p:hover {
+.browse li:hover {
     color: var(--color-primary);
 }
 

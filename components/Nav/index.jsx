@@ -129,7 +129,7 @@ function Nav() {
             <a href="#contact">
               <motion.button
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.8, type: "tween", duration: 0.1 }}
+                transition={{ delay: 0.45, type: "tween", duration: 0.15 }}
                 initial={{ opacity: 0 }}
                 className={styles.cta}
               >

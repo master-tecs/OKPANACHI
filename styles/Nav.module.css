@@ -105,6 +105,7 @@
 .nav .container .menuSm>a {
     display: flex;
     justify-content: center;
+    color: var(--color-dark);
 }
 
 /*  */

@@ -2,7 +2,7 @@ import styles from "../../styles/About.module.css";
 
 function About({ subTitle, title, detail }) {
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="about">
       <div className={styles.container}>
         <h4 className={styles.subtitle}>{subTitle}</h4>
         <h1 className={styles.title}>{title}</h1>

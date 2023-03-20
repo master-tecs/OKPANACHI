@@ -5,22 +5,32 @@
     color: var(--color-white);
 }
 
+
 .footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 4fr 1fr 3fr 3fr;
+    gap: 1rem;
     width: 85%;
     height: 100%;
-    margin: auto;
-    margin-bottom: 30px;
+    margin: 40px auto 10px;
+    /* margin-bottom: 30px; */
     max-width: 1450px;
 }
 
 .footer .container .top {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin: 30px 0 20px;
+    /* text-align: center; */
+    /* margin: 30px 0 20px; */
+    flex: .4;
+}
+
+.footer .container .browse {
+    flex: .2;
+}
+
+.footer .container .servises {
+    flex: .3;
 }
 
 .footer .container h2 {
@@ -35,13 +45,6 @@
 .footer .container b {
     color: var(--color-secondary);
 
-}
-
-.footer .container .contact {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 30px 0 20px;
 }
 
 .footer .copy {
@@ -59,11 +62,118 @@
     color: var(--color-primary);
 }
 
+.browse li {
+    margin-top: .4rem;
+    cursor: pointer;
+}
 
+.servises p {
+    margin-top: .4rem;
+    cursor: pointer;
+}
+
+.locations>div {
+    display: flex;
+    gap: 0.3rem;
+    margin-top: .6rem;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    font-size: 15px;
+}
+
+.locations>div svg {
+    color: var(--color-primary);
+    font-size: 18px;
+    margin-top: 2.5px;
+}
+
+.locations>div :hover, .browse li:hover, .servises p:hover {
+    color: var(--color-primary);
+}
+
+
+.footer .contact {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 20px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .contact b {
+    color: var(--color-secondary);
+}
 
 /*  */
 /* MEDIA QURIES FOR SMALL TABLETS AND MOBILE PHONES */
 /*  */
-@media screen and (max-width: 740px) {
-    .footer {}
+@media screen and (max-width: 800px) {
+
+
+    .footer .container {
+        grid-template-areas: "top top top"
+            "browse services locations"
+        ;
+        grid-template-columns: 1fr 2.5fr 3fr;
+        gap: 1rem;
+        width: 90%;
+        margin: 40px auto 10px;
+        /* margin-bottom: 30px; */
+    }
+
+    .top {
+        grid-area: top;
+        text-align: center;
+    }
+
+    .browse {
+        grid-area: browse;
+    }
+
+    .servises {
+        grid-area: services;
+    }
+
+    .locations {
+        grid-area: locations;
+    }
+}
+
+
+/*  */
+/* MEDIA QURIES FOR MOBILE PHONES AND SMALL PHONES */
+/*  */
+@media screen and (max-width: 575px) {
+
+    .footer .container {
+        grid-template-areas: "top top "
+            "locations locations"
+            "browse services "
+        ;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+        width: 90%;
+        margin: 40px auto 10px;
+        /* margin-bottom: 30px; */
+    }
+
+    .top {
+        grid-area: top;
+        text-align: center;
+    }
+
+    .browse {
+        grid-area: browse;
+    }
+
+    .servises {
+        grid-area: services;
+    }
+
+    .locations {
+        grid-area: locations;
+    }
 }

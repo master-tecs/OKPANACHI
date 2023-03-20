@@ -12,10 +12,10 @@ function Service({ Icon, title, details }) {
           <h4>{title}</h4>
           <p>{details}</p>
         </div>
-        <label className={styles.cta}>
+        <span className={styles.cta}>
           <p>Tap for more</p>
           <ArrowForwardRounded />
-        </label>
+        </span>
       </div>
     </div>
   );

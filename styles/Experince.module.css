@@ -32,7 +32,7 @@
 .experince .container ul li {
     width: 100%;
     border-radius: 8px;
-    background-color: var(--color-primary);
+    background-color: rgba(111, 236, 134, .6);
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
         -6px -6px 10px -1px rgba(225, 225, 225, 0.7);
     margin: 0 0 1.5rem;
@@ -85,7 +85,7 @@
 }
 
 .experince .container .federal .list .item {
-    background: var(--color-secondary);
+    background: rgba(254, 154, 6, .85);
     padding: 4px 7px;
     font-size: small;
     border-radius: 8px;

@@ -23,7 +23,6 @@
 
 .banner .container .right {
     /* flex: .55; */
-    background-color: #a03131;
 }
 
 .banner .container .right .img {
@@ -37,26 +36,36 @@
 
 .banner .container .left h1 {
     font-size: 34px;
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .banner .container .left p {
-    margin: 18px 0 25px;
+    margin: 18px 0 30px;
     line-height: 1.5em;
 }
 
 .banner .container .cta {
     display: inline-block;
-    padding: var(--btn-padding);
+    /* padding: var(--btn-padding); */
+    padding: 10px 35px;
     font-weight: 500;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: .85rem;
-    background-color: var(--color-third);
-    color: aliceblue;
+    font-size: .95rem;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
 }
 
+.banner .container .cta:hover {
+    scale: 1.05;
+    opacity: 0.9;
+}
+
+.banner .container .cta:active {
+    scale: 0.95;
+}
 
 .banner .container .cta:hover {
     opacity: 0.8;
@@ -76,6 +85,7 @@
     .banner .container {
         flex-direction: column;
         justify-content: space-evenly;
+        padding: 30px 0;
     }
 
     .banner .container .left, .banner .container .right {
@@ -94,5 +104,6 @@
 @media screen and (max-width: 440px) {
     .banner .container {
         width: 90%;
+        padding: 40px 0;
     }
 }

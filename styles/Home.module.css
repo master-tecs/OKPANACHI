@@ -1,0 +1,29 @@
+.topButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    z-index: 9;
+    cursor: pointer;
+    padding: .4rem .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-third), var(--color-secondary));
+    border-radius: 8px;
+    gap: 0.5rem;
+    transition: all .2s ease-in;
+}
+
+.topButton:hover {
+    opacity: 0.8;
+    scale: 1.05;
+    opacity: 0.9;
+}
+
+.topButton:active {
+    scale: 0.95;
+}
+
+.topButton svg {
+    font-size: 18px;
+}

@@ -1,8 +1,9 @@
 .staff {
-    background-color: var(--color-secondary);
+    background-color: var(--color-light);
     /* background-color: #c6efbe; */
     width: 100%;
     height: auto;
+    /* margin-top: 40px; */
 }
 
 
@@ -46,7 +47,8 @@
     margin: 1rem;
     border-radius: 8px;
     overflow: hidden;
-    background-color: var(--color-primary);
+    /* background-color: var(--color-primary); */
+    background-color: var(--color-third);
     height: 380px;
     width: 250px;
 
@@ -70,13 +72,15 @@
 
 .item h3 {
     font-size: medium;
-    color: var(--color-danger);
+    color: var(--color-dark);
 }
 
 /* PARTNERS */
 .partners {
     margin: 40px 0 0;
-    background-color: var(--color-third);
+    padding: 50px;
+    /* background-color: var(--color-third); */
+    background-image: linear-gradient(var(--color-primary), var(--color-third));
 }
 
 

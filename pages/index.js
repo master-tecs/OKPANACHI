@@ -1,6 +1,9 @@
+import { ArrowUpward } from "@mui/icons-material";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import About from "../components/About/inde";
 import Banner from "../components/Banner";
+import Contact from "../components/Contact";
 import Experince from "../components/Experince";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -9,6 +12,24 @@ import Staff, { Partners } from "../components/Staff";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [ShowButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScrollButtonVisibility = () => {
+      window.pageYOffset > 300 ? setShowButton(true) : setShowButton(false);
+    };
+
+    window.addEventListener("scroll", handleScrollButtonVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollButtonVisibility);
+    };
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,9 +53,12 @@ export default function Home() {
             seeks to provide professional services to clients on a personal
             basis and to calve an enviable reputation in our wide range of
             services."
-          btn="Get A Col"
+          btn="Get A Quote"
           img="./images/3.jpg"
         />
+
+        {/* Services */}
+        <Services />
 
         {/* About */}
         <About
@@ -47,6 +71,14 @@ export default function Home() {
 
         {/* Experince */}
         <Experince />
+
+        {/* PROFESSIONAL DEVELOPMENTS */}
+        <Banner
+          title="PROFESSIONAL DEVELOPMENTS"
+          detail=" We recognize that the essence of training for the profession is in working in it. Therefore, on the job training is an important part of the development of potentialities of staff through exposure to different types of assignments and working with more experienced members of staff.  Staff are therefore properly supervised and the work of junior staff reviewed by more experienced members of staff and evaluated.
+          "
+          img="./images/2.jpg"
+        />
 
         {/* Partners & Staffs */}
         <Partners />
@@ -61,17 +93,6 @@ export default function Home() {
           "
           img="./images/1.jpg"
           noMarging
-        />
-
-        {/* Services */}
-        <Services />
-
-        {/* PROFESSIONAL DEVELOPMENTS */}
-        <Banner
-          title="PROFESSIONAL DEVELOPMENTS"
-          detail=" We recognize that the essence of training for the profession is in working in it. Therefore, on the job training is an important part of the development of potentialities of staff through exposure to different types of assignments and working with more experienced members of staff.  Staff are therefore properly supervised and the work of junior staff reviewed by more experienced members of staff and evaluated.
-          "
-          img="./images/2.jpg"
         />
 
         {/* Why choose us */}
@@ -101,10 +122,19 @@ export default function Home() {
         {/* Case Study */}
         {/* Testimonial */}
         {/* Contact */}
+        <Contact />
       </main>
 
       {/* Footer */}
       <Footer />
+
+      {/* Scroll to top */}
+      {ShowButton && (
+        <div className={styles.topButton} onClick={handleScrollToTop}>
+          <h4>Top</h4>
+          <ArrowUpward />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,110 @@
+.contact {
+    background-color: var(--color-third);
+    width: 100%;
+    height: 85vh;
+}
+
+
+.contact .container {
+    width: 85%;
+    height: 100%;
+    margin: auto auto;
+    padding: 80px 0 70px;
+    gap: 20px;
+    text-align: center;
+    max-width: 1400px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "subheader subheader"
+        "locations numbers"
+    ;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1rem;
+}
+
+
+.container>h2 {
+    grid-area: header;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container>p {
+    grid-area: subheader;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.locations {
+    grid-area: locations;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-align: left;
+}
+
+.number {
+    margin: 10px 0 60px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.location>div, .number {
+    display: flex;
+    gap: 0.4rem;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.location>div svg, .number svg {
+    color: var(--color-secondary);
+    font-size: 18px;
+    margin-top: 2.5px;
+}
+
+.location>div :hover, .number p:hover {
+    color: var(--color-secondary);
+}
+
+.numbers {
+    grid-area: numbers;
+    text-align: center;
+}
+
+
+/*  */
+/* MEDIA QURIES FOR SMALL TABLETS AND MOBILE PHONES */
+/*  */
+@media screen and (max-width: 700px) {
+
+    .container {
+        grid-template-areas:
+            "header"
+            "subheader "
+            "locations "
+            "numbers"
+        ;
+        grid-template-columns: 1fr;
+    }
+
+    .numbers {
+        margin: 40px 0 0px;
+    }
+
+    .number {
+        margin: 0 0 20px;
+    }
+
+}

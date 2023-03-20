@@ -15,7 +15,7 @@ import Service from "../Service";
 
 function Services() {
   return (
-    <div className={styles.services}>
+    <div className={styles.services} id="services">
       <div className={styles.container}>
         <div className={styles.top}>
           <h4 className={styles.subtitle}>Services</h4>

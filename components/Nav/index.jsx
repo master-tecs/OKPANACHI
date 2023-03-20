@@ -6,18 +6,36 @@ import { useState } from "react";
 function Nav() {
   const [open, setOpen] = useState(false);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        <h3 className={styles.logo}>OKPANACHI</h3>
+        <h3 className={styles.logo}>
+          <a href="http://www.okpanachi.com/"> OKPANACHI & CO</a>
+        </h3>
         <ul className={styles.menu}>
-          <li>About</li>
-          <li>Services</li>
-          <li>Testimonial</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <li onClick={handleScrollToTop}>
+            <a> Home</a>
+          </li>
+          <li>
+            <a href="#services"> Services</a>
+          </li>
+          <li>
+            <a href="#about"> About</a>
+          </li>
+          <li>
+            <a href="#staff"> Staff</a>
+          </li>
+          <li>
+            <a href="#contact"> Contact</a>
+          </li>
         </ul>
-        <button className={styles.cta}>Get A Col</button>
+        <a href="#contact">
+          <button className={styles.cta}>Get A Quote</button>
+        </a>
 
         {!open ? (
           <MenuRoundedIcon
@@ -31,13 +49,27 @@ function Nav() {
           />
         )}
 
-        <ul className={open ? styles.menuSm : styles.menuSmClose}>
-          <li>About</li>
-          <li>Services</li>
-          <li>Testimonial</li>
-          <li>Blog</li>
-          <li>Contact</li>
-          <button className={styles.cta}>Get A Col</button>
+        <ul
+          className={!open ? styles.menuSm : `${styles.menuSm} ${styles.open}`}
+        >
+          <li onClick={handleScrollToTop}>
+            <a> Home</a>
+          </li>
+          <li>
+            <a href="#services"> Services</a>
+          </li>
+          <li>
+            <a href="#about"> About</a>
+          </li>
+          <li>
+            <a href="#staff"> Staff</a>
+          </li>
+          <li>
+            <a href="#contact"> Contact</a>
+          </li>
+          <a href="#contact">
+            <button className={styles.cta}>Get A Quote</button>
+          </a>
         </ul>
       </div>
     </nav>

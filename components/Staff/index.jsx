@@ -7,7 +7,7 @@ function Staff() {
       <div className={styles.container}>
         <div className={styles.top}>
           <h2> PROFESSIONAL STAFF</h2>
-          <h3>Assurance Associate and Information Technology Audit Staff</h3>
+          {/* <h3>Assurance Associate and Information Technology Audit Staff</h3> */}
 
           <div>
             <p>Michael Okpanachi B.Sc. ACIT, FCA</p>
@@ -69,7 +69,7 @@ function Item({ img, name, job }) {
 
 export function Partners() {
   return (
-    <div className={styles.partners}>
+    <div className={styles.partners} id="staff">
       <div className={styles.container}>
         <h2>PRINCIPAL PARTNERS</h2>
         <div>

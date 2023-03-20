@@ -53,7 +53,7 @@
 /*  */
 @media screen and (max-width: 740px) {
     .about {
-        height: auto;
+        height: 90vh;
         padding: 15px 0;
     }
 

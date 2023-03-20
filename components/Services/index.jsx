@@ -5,10 +5,8 @@ import {
   InfoSharp,
   InsertChartOutlined,
   LayersTwoTone,
-  MilitaryTechOutlined,
   MoneyOffCsredRounded,
   PeopleAltOutlined,
-  ProductionQuantityLimitsSharp,
 } from "@mui/icons-material";
 import styles from "../../styles/Services.module.css";
 import Service from "../Service";
@@ -20,7 +18,6 @@ function Services() {
         <div className={styles.top}>
           <h4 className={styles.subtitle}>Services</h4>
           <h1 className={styles.title}>SERVICES WE PROVIDE</h1>
-          <p></p>
         </div>
 
         <div className={styles.bottom}>

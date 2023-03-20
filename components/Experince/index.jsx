@@ -1,16 +1,28 @@
+import { motion } from "framer-motion";
 import styles from "../../styles/Experince.module.css";
 
 function Experince() {
   return (
     <div className={styles.experince}>
       <div className={styles.container}>
-        <h1 className={styles.title}>MAJOR AGNMENTS/EXPERIENCE </h1>
-        <p>
+        <motion.h1
+          className={styles.title}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, type: "tween", duration: 0.15 }}
+          initial={{ opacity: 0, y: 100 }}
+        >
+          MAJOR AGNMENTS/EXPERIENCE
+        </motion.h1>
+        <motion.p
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.25, type: "tween", duration: 0.15 }}
+          initial={{ opacity: 0, scale: 0.3 }}
+        >
           Since the commencement of operations we have been privileged to have
           been appointed External Auditors / Accountants (and our Partners have
           previously provided services) to a number of Government establishments
           and Companies, chief amongst which are the following:-
-        </p>
+        </motion.p>
         <ul>
           <li>
             <div className={styles.federal}>

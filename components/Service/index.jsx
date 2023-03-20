@@ -5,7 +5,7 @@ import styles from "../../styles/Service.module.css";
 
 function Service({ Icon, title, details }) {
   const [view, setView] = useState(false);
-  const maxLength = 210;
+  const maxLength = 190;
 
   const handleView = () => {
     setView(!view);

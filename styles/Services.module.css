@@ -1,5 +1,6 @@
 .services {
     background-color: #eefeee;
+    background-color: var(--color-third);
     width: 100%;
     height: auto;
 }

@@ -11,7 +11,7 @@ function Experince() {
           transition={{ delay: 0.15, type: "tween", duration: 0.15 }}
           initial={{ opacity: 0, y: 100 }}
         >
-          MAJOR AGNMENTS/EXPERIENCE
+          MAJOR ASSIGNMENTS/EXPERIENCE
         </motion.h1>
         <motion.p
           whileInView={{ opacity: 1, scale: 1 }}

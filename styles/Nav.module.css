@@ -102,9 +102,13 @@
 }
 
 /* Additional */
-.nav .container .menuSm>a {
+.nav .container .menuSm>a, .open>a {
     display: flex;
     justify-content: center;
+    color: var(--color-dark);
+}
+
+.nav .container .menuSm>a:visited, .open>a:visited {
     color: var(--color-dark);
 }
 
